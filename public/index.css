@@ -1,0 +1,503 @@
+        :root {
+            --content-width: 1090px;
+            --tile-size: 210px;
+        }
+        p,body,html{
+            margin: 0;
+        }
+        svg{
+            display: block;
+            pointer-events: none;
+        }
+        body{
+
+            margin: 0;
+            height: 100dvh;
+
+
+            background: url("/imgs/Flaming\ Rider\ on\ Stormy\ Highway.png") no-repeat center center;
+            background-size: auto 100%;
+
+            background-color: rgb(0, 0, 0);
+
+            position: relative;
+
+        }
+        /* body::before,
+        body::after {
+            content: "";
+            position: fixed;
+            top: 0;
+            bottom: 0;
+            width: max((100vw - var(--content-width)) / 2, 0px); 
+            background-image: url("./imgs/$HWIN.png");
+            background-repeat: repeat;
+            background-size: var(--tile-size) auto;
+            background-position: top left;
+            pointer-events: none;
+            z-index: 0;
+        }
+        body::before { left: 0; }
+        body::after  { right: 0; background-position: top right; } */
+
+
+
+        header{
+            display: flex;
+            justify-content: space-between;
+            align-items: start;
+            padding: 0px 20px 0 0;
+
+            max-width: 1050px;
+            margin: 0 auto;
+        }
+        .title_holder{
+            height: 210px;
+        }
+        .title{
+            height: 100%;
+            margin-top: -20px;
+        }
+        .live{
+            display: flex;
+            margin-top: 35px;
+            
+        }
+        .live_circle_red{
+            width: 25px;
+            height: 25px;
+            background-color: red;
+            margin-right: 4px;
+            border-radius: 3rem;
+        }
+
+        .live_link{
+            display: flex;
+            align-items: center;
+
+            gap: 0.9rem;
+
+            padding: 16px 22px ;
+            border-radius: 3rem;
+            font-size: 20px;
+            text-decoration: none;
+            color: white;
+
+            position: relative;
+
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+
+            background-color: rgba(63, 63, 63, 0.311);
+            background-image: radial-gradient(circle at 70% 150% , rgba(44, 44, 44, 0.537), transparent);
+
+            box-shadow: inset -5px -4px 12px rgba(122, 122, 122, 0.275);
+        }
+        .live_link::before{
+            content: "";
+            position: absolute;
+            z-index: -1;
+            inset: 0;
+            border-radius: inherit;
+            background-color: rgb(209, 190, 190);
+
+            border: 2.4px solid transparent;
+
+            background: linear-gradient(162deg,rgb(149, 149, 149) , rgb(48, 48, 48) 92% ) border-box;
+
+            mask: linear-gradient(black , black) border-box,
+            linear-gradient(black , black) padding-box;
+
+            mask-composite:subtract;
+            -webkit-mask-composite: xor;
+        }
+        .live svg{
+            width: 45px;
+            height: 45px;
+        }
+
+        .card{
+            position: relative;
+
+            backdrop-filter: blur(9px);
+            -webkit-backdrop-filter: blur(9px);
+
+            background-color: rgba(56, 56, 56, 0.311);
+            background-image: radial-gradient(circle at 70% 150% , rgba(44, 44, 44, 0.537), transparent);
+
+            box-shadow: inset -5px -4px 12px rgba(110, 110, 110, 0.275);
+
+        }
+        .card::before{
+            content: "";
+            position: absolute;
+            z-index: -1;
+            inset: 0;
+            border-radius: inherit;
+            background-color: rgb(209, 190, 190);
+
+            border: 2.4px solid transparent;
+
+            background: linear-gradient(162deg,rgba(155, 155, 155, 0.55) , rgb(47, 47, 47) 92%) border-box;
+
+            mask: linear-gradient(black , black) border-box,
+            linear-gradient(black , black) padding-box;
+
+            mask-composite:subtract;
+            -webkit-mask-composite: xor;
+        }
+
+        .CA-section{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            position: absolute;
+            bottom: 50px;
+            left: 50%;transform: translateX(-50%);
+
+            gap: 0.6rem;
+
+            width: 80%;
+            max-width: 650px;
+
+
+        }
+
+        .CA{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 0.6rem;
+
+            border-radius: 1.8rem;
+            padding: 16px 24px 12px;
+            color: white;
+            font-size: 20px;
+            letter-spacing: 0.04rem;
+            cursor: pointer;
+
+            min-width: 0;
+            overflow-wrap: break-word;
+            word-break: break-word;
+            
+        }
+
+        .CA-txt{
+            letter-spacing: 0.1rem;
+            color: rgb(207, 207, 207);
+
+            text-align: center;
+        }
+        .sub-txt{
+            font-size: 16px;
+            color: rgb(174, 174, 174);
+        }
+
+
+        .dex{
+            padding: 14px 14px;
+            border-radius: 1.4rem;
+        }
+        .secondary{
+            box-sizing: border-box;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+
+            padding: 0 10px;
+
+        }
+        .secondary svg{
+            width: 48px;
+            height: 48px;
+        }
+        .socials{
+            display: flex;
+            align-items: center;
+            gap: 1.4rem;
+            /* padding:12px 16px; */
+            border-radius: 1.6rem;
+        }
+        .socials svg{
+            width: 40px;
+            height: 40px;
+        }
+        .x{
+            padding-top: 2px;
+            margin-right: 4px;
+        }
+        .socials a{
+            display: block;
+
+            padding: 14px 14px;
+
+            text-decoration: none;
+            color: white;
+        }
+
+        .new{
+            position: fixed;
+            top: 40px;
+            left: 50%; transform: translateX(-50%) translateY(-50px);
+            background-color: rgb(41, 41, 41);
+            padding: 14px 18px;
+            box-shadow: 0 0 16px rgba(158, 158, 158, 0.4);
+            border-radius: 0.9rem;
+            border: 2px solid rgb(115, 115, 115);
+
+            transition: opacity 0.6s ;
+        }
+        .new-txt{
+            color: white;
+            font-size: 20px;
+        }
+
+        #flash {
+            visibility: hidden;
+            pointer-events: none;
+            opacity: 0;
+
+            transition:
+            opacity 200ms ease,
+            transform 200ms ease,
+            visibility 0s linear 200ms; 
+        }
+        #flash.is-visible {
+            opacity: 1;
+            transform: translateX(-50%) translateY(0);
+            visibility: visible;
+            transition:
+            opacity 180ms ease,
+            transform 180ms ease,
+            visibility 0s;
+        }
+
+
+        @media (max-width: 600px) {
+            .title_holder {
+
+                height: 170px;
+            }
+            .title{
+                height: 100%;
+                margin-top: -10px;
+            }
+
+            .live svg{
+                width: 35px;
+                height: 35px;
+            }
+            .live_circle_red{
+                width: 18px;
+                height: 18px;
+            }
+
+            .live_link{
+                display: flex;
+                align-items: center;
+
+                gap: 0.7rem;
+
+                padding: 16px 18px;
+                border-radius: 3rem;
+                font-size: 18px;
+
+            }
+            .CA{
+                font-size: 18px;
+            }
+
+            .secondary svg{
+                width: 42px;
+                height: 42px;
+            }
+            .socials svg{
+                width: 34px;
+                height: 34px;
+            }
+            .sub-txt{
+                font-size: 15px;
+                color: rgb(174, 174, 174);
+            }
+        }
+
+        @media (max-width: 500px){
+            header{
+                padding-right: 10px;
+            }
+            .title_holder {
+                height: 150px;
+            }
+            .title{
+                height: 100%;
+                margin-top: -8px;
+            }
+
+            .live{
+                margin-top: 28px;
+            }
+            .live svg{
+                width: 32px;
+                height: 32px;
+            }
+            .live_circle_red{
+                width: 17px;
+                height: 17px;
+            }
+
+            .live_link{
+                display: flex;
+                align-items: center;
+
+                gap: 0.5rem;
+
+                padding: 16px 18px;
+                border-radius: 3rem;
+                font-size: 18px;
+
+            }
+            .CA-section{
+                width: 90%;
+            }
+            .CA{
+                font-size: 18px;
+            }
+
+            .secondary svg{
+                width: 42px;
+                height: 42px;
+            }
+            .socials svg{
+                width: 34px;
+                height: 34px;
+            }
+            .sub-txt{
+                font-size: 15px;
+                color: rgb(174, 174, 174);
+            }
+        }
+
+        @media (max-width: 420px){
+            header{
+                padding-right: 5px;
+                gap: 0;
+            }
+            .title_holder {
+                height: 150px;
+            }
+            .title{
+                height: 100%;
+                margin-top: -8px;
+            }
+
+            .live{
+                margin-top: 31px;
+            }
+            .live svg{
+                width: 32px;
+                height: 32px;
+                margin-left: 4px;
+            }
+            .live_circle_red{
+                width: 15px;
+                height: 15px;
+            }
+
+            .live_link{
+                display: flex;
+                align-items: center;
+
+                gap: 0.1rem;
+
+                padding: 15px 15px;
+                border-radius: 3rem;
+                font-size: 16px;
+
+            }
+            .CA{
+                font-size: 17px;
+                border-radius: 1.7rem;
+            }
+
+
+            .secondary svg{
+                width: 38px;
+                height: 38px;
+            }
+            .socials{
+
+                gap: 1rem;
+                border-radius: 1.5rem;
+            }
+            .socials svg{
+                width: 30px;
+                height: 30px;
+            }
+
+            .sub-txt{
+                font-size: 15px;
+                color: rgb(174, 174, 174);
+            }
+        }
+
+        @media (max-width: 375px){
+            header{
+                padding-right: 5px;
+                gap: 0;
+            }
+            .title_holder {
+                height: 135px;
+            }
+            .title{
+                height: 100%;
+                margin-top: -8px;
+            }
+            .live{
+                margin-top: 25px;
+            }
+            .live svg{
+                width: 32px;
+                height: 32px;
+                margin-left: 4px;
+            }
+            .live_circle_red{
+                width: 15px;
+                height: 15px;
+            }
+
+            .live_link{
+                display: flex;
+                align-items: center;
+
+                gap: 0.1rem;
+
+                padding: 15px 15px;
+                border-radius: 3rem;
+                font-size: 16px;
+
+            }
+            .CA{
+                font-size: 17px;
+                border-radius: 1.7rem;
+            }
+
+
+            .secondary svg{
+                width: 38px;
+                height: 38px;
+            }
+            .socials{
+
+                gap: 1rem;
+                border-radius: 1.5rem;
+            }
+            .socials svg{
+                width: 30px;
+                height: 30px;
+            }
+
+            .sub-txt{
+                font-size: 15px;
+                color: rgb(174, 174, 174);
+            }
+        }
