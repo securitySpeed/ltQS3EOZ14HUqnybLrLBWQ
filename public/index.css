@@ -250,6 +250,7 @@
             transition: opacity 0.6s ;
         }
         .new-txt{
+            text-align: center;
             color: white;
             font-size: 20px;
         }
